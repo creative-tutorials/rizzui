@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { Header } from "@/components/layout/header";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -31,7 +30,6 @@ export default function Home() {
           className="rounded-md"
         />
       </div>
-      <Header />
       <div id="s-wrapper" className="md:mt-40 lg:mt-40 mt-0">
         <section
           id="home"
@@ -48,9 +46,11 @@ export default function Home() {
             </p>
           </hgroup>
           <div id="btn-wrapper" className="flex items-center gap-4">
-            <Button className="bg-[#426AC6] hover:bg-[#395fb8] rounded-full text-lg p-7 flex items-center gap-2">
-              Get Started <ArrowRight />
-            </Button>
+            <Link href="/docs">
+              <Button className="bg-[#426AC6] hover:bg-[#395fb8] rounded-full text-lg p-7 flex items-center gap-2">
+                Get Started <ArrowRight />
+              </Button>
+            </Link>
             <Button className="bg-transparent border border-[#2A2B2D] hover:bg-zinc-900 rounded-full text-lg p-7 flex items-center gap-2">
               <svg
                 width="24"
